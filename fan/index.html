@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fan</title>
+    
+    <style>
+        html{
+            display: grid;
+            justify-content: center;
+            
+        }
+        .container{
+            width: 500px;
+            height: 800%;
+            background-color: black;
+            position: relative;
+            border-radius: 20%;
+            text-align: center;
+            border-radius: 20%;
+        }
+       
+        .first-container,.second-container,.third-container,.fourth-container{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+        }
+        .first,.second{
+            border-radius: 20%;
+            background-color: grey;
+        }
+        .first{
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 5%;
+            height: 40%;
+        }
+        .second{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            width: 5%;
+            height: 40%;
+        }
+        .third,.fourth{
+            width: 20%;
+            height: 10%;
+            background-color: gray;
+            border-radius: 20%;
+
+        }
+        .third{
+            position: absolute;
+            top: 45%;
+            left:25%;
+            height: 8%;
+            width: 25%;
+        }
+        .fourth{
+            position: absolute;
+            left: 55%;
+            top: 45%;
+            height: 8%;
+            width: 23%;
+        }
+        .btn-container{
+           
+            position: relative;
+            top:15px
+
+        }
+        button{
+            background-color: grey;
+            border: none;
+            
+            margin: 10px;
+            width: 90px;
+        }
+
+        .first-rotate{
+            animation: rotate 30s infinite linear;
+        }
+        .second-rotate{
+            animation: rotate 30s infinite linear;
+        }
+        .third-rotate{
+            animation: rotate 30s infinite linear;
+        }
+        .fourth-rotate{
+            animation: rotate 30s infinite linear;
+        }
+
+        @keyframes rotate{
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first-container">
+            <div class="first">
+            </div>
+        </div>
+        <div class="second-container">
+            <div class="second"></div>
+        </div>
+        <div class="third-container">
+            <div class="third"></div>
+        </div>
+            <div class="fourth-container">
+                <div class="fourth"></div>
+            </div>
+        
+        <div class="center"></div>
+    </div>
+    <div class="btn-container">
+        <button onclick="start()">On</button>
+        <button onclick="medium()">Medium</button>
+        <button onclick="fast()">Fast</button>
+        <button onclick="stop()">off</button>
+    </div>
+</body>
+<script src="./fan.js"></script>
+</html>
