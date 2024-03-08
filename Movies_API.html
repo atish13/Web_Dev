@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies API</title>
+    <style>
+        body{
+            text-align:  center;
+            background-color:  black;
+            color: white;
+
+        }
+        .nav{
+            background-color:#A0AECD;
+           
+        }
+        .nav input{
+            padding: 5px;
+            background-color:#A0AECD;
+            border-radius: 5px;
+            
+        }
+        .nav button{
+            border:  none;
+            padding: 4px;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            margin: 5px;
+        }
+        .img-box{
+           display: grid;
+        
+           grid-template-columns: auto auto auto;
+           grid-gap: 5px;
+        }
+        div{
+            padding: 10px;
+         
+            text-align: center;
+            
+        }
+       .img-box> div:hover{
+          filter: brightness(50%);
+          
+        }
+        h2{
+            font-style: italic;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>MoviesSearch.com</h2>
+        <input type="text" id="search" placeholder="movie name">
+        <button>search</button>
+    </div>
+    
+  
+    <div class="img-box">
+    </div>
+    
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+   
+
+            $("button").click(()=>{
+
+                let b=$("#search").val();
+                if(b=='')
+                {
+                    alert("enter valid movie");
+                }
+
+                $("document").ready(()=>{
+                    fetch(`https://api.tvmaze.com/search/shows?q=${b}`).then((data)=>{
+                        return data.json();
+                       
+                    }).then((d)=>{
+                    // console.log(d)
+                    // console.log(d.show.name)
+                    poster(d)
+                }
+               
+                    )
+                    
+                    // var img;
+                    function poster(d){
+                        d.forEach(element => {
+                            
+                            let src=element.show.image.medium;
+                            let name=element.show.name;
+                            let innerDiv=document.createElement("div");
+                            console.log(name);
+                            let title=document.createElement("h4");
+
+                            title.innerText=name;
+                             img=document.createElement("img");
+                            img.src=src;
+                            
+                            innerDiv.append(img);
+                            innerDiv.appendChild(title);
+
+                           
+                            
+                            $(".img-box").append(innerDiv);  
+                          
+                        })
+                        
+
+                        
+                       
+                        // alert('ok');
+                    }
+                })
+            })
+            
+           
+
+
+
+</script>
+</html>

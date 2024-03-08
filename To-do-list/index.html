@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+    <style>
+        html{
+            background-color: white;
+            color: black;
+            display: grid;
+            justify-content: center;
+
+        }
+        .container{
+            text-align: center;
+            border: 1px solid white;
+            grid-gap: 20px;
+            overflow-x: hidden;
+            height: 80vh;
+            width: 40vw;
+             background-color: antiquewhite;
+             border-radius: 10px;
+        }
+        .ul-list{
+            border: 1px solid white;
+            text-align: start;
+        }
+        .ul-list ul li{
+            list-style-type: none;
+        }
+       
+        .add-list{
+            position: relative;
+            top: 270px;
+        }
+        button{
+            background-color: red;
+            border:none;
+            padding: 3px;
+            color: white;
+            border-radius: 20px;
+        }
+        .cancel {
+        float: right;
+        cursor: pointer;
+            color: red;
+        }
+        .search-ip{
+            position: relative;
+            top:300px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>To Do List</h1>
+        <div class="search-list">
+            <input class="search-ip" type="text" placeholder="search">
+            <button class="search-btn">Search</button>
+        </div>
+            <div class="ul-list">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="add-list">
+                <input class="ip-type" type="text" placeholder="enter task here">
+                <button class="add-btn">Add</button>
+            </div>
+           
+    </div> -->
+    <div class="container">
+        <h1>Todo List</h1>
+
+        <input type="text" id="todo-input" placeholder="Enter your todo">
+        <button onclick="addTodo()">Add</button>
+        <div id="todo-list">
+            
+        </div>
+
+        <div class="search-ip">
+            <input type="text" id="todo-search" placeholder="Enter your todo">
+            <button onclick="searchV()">search</button>
+        </div>
+       
+    </div>
+   
+
+    <script src="./todo.js"></script>
+</body>
+</html>
