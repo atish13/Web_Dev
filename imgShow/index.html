@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+  display :grid;
+  justify-content: center;
+  background-color: black;
+
+}
+.div-2
+{
+    justify-self: center;
+    align-self: flex-end;
+  background-color: black;
+}
+
+img{
+  width: 200px;
+  height: 250px;
+  position: absolute;
+}
+button{
+    position: relative;
+    top: 260px;
+    left: 70px;
+    background-color: red;
+    color: white;
+    width: 60px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img  id="img1" src="https://th.bing.com/th/id/OIP.-D5xt6nfX4BGup0qkTmyiAHaFI?rs=1&pid=ImgDetMain" alt="pic1" values="1">
+        <img id="img2" src="https://celebratingsweets.com/wp-content/uploads/2022/04/White-Cake-Recipe-5.jpg" alt="" values="2">
+        <img  id="img3" src="https://images7.alphacoders.com/596/596343.jpg" alt="" values="3">
+        <button class="hide">hide</button>
+        <button class="slide">slide</button>
+        </div>
+</body>
+<script>
+   var btn=document.querySelector(".hide");
+   var i=3;
+   btn.addEventListener("click",()=>{
+    document.querySelector("#img"+i).style.display="none";
+    i=i-1;
+
+   })
+
+   var slide=document.querySelector(".slide");
+   slide.addEventListener("click",()=>{
+    var c=document.querySelector("#img3");
+    c.style.position="relative";
+    c.style.top="350px";
+
+    var c=document.querySelector("#img2");
+    c.style.position="relative";
+    c.style.left="250px";
+
+    var c=document.querySelector("#img1");
+    c.style.position="relative";
+    c.style.right="70px";
+
+
+
+   })
+
+</script>
+</html>

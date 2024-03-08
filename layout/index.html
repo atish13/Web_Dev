@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-page</title>
+    <style>
+   
+    .logo{
+        justify-self:center;
+        align-self: center;
+        grid-area: logo;
+
+    }
+    .menu-list{
+        justify-self: end;
+        align-self: end;
+        grid-area: menu;
+    }
+    .menu-list ul{
+        display: flex;
+    }
+    .menu-list ul li
+    {
+        list-style-type: none;
+        padding: 5px;
+        font-size: 17px;
+    }
+    .container{
+        display: grid;
+        border: 0.5px solid black;
+        grid-template-rows: 3rem;
+background-color: azure;
+        grid-template-areas: "logo menu menu"
+                            "content content aside"
+                            "footer footer footer";
+    }
+    .content-text
+    {
+        grid-template-areas: content;
+        justify-self:center ;
+        padding: 10px;
+        border: 0.5px solid black;
+        background-color:beige ;
+    }
+    aside{
+        grid-area: aside;
+        border: 0.5px solid black;
+        background-color: whitesmoke;
+    }
+    aside li{
+        margin-bottom: 20px;
+    }
+    .footer-content{
+        grid-area: footer;
+        justify-self: center;
+        align-self: flex-end;
+
+    }
+    @media screen and (max-width: 280px) {
+        .container{
+            border: none;
+        }
+        .menu-list, .logo{
+            background-color: whitesmoke;
+        }
+        h2{
+            font-size: small;
+        }
+        
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        
+        <header class="logo">
+                    <h2>Atish  Sonawane</h2>
+        </header>
+
+            <nav class="menu-list">
+                <ul>
+                    <li><a id="home" href="#">project</a></li>
+                    <li><a class="about" href="#">About</a></li>
+                    <li><a  id="feedback" href="#">Feedback</a></li>
+                    
+
+                </ul>
+            </nav>
+        <section class="content-text">
+            <h2>project Details </h2>
+           <p> <h5>1.Topic name:</h5> Traveling website Duration:1 week project Description: 
+            •	The user can select the desired location and we provide them facility such as hotel booking tourist guide and etc. </p>
+            <br></br>
+             <p>
+           <h5> 2.Topic name:</h5>Coffee Café Management  Duration:1 week project  Description: 
+            •	In this project we provide the different variety of coffee to people. 
+            The admin can performs CRUD operation such as adding stocks,reading a payment details and delete a record. 
+            </p>
+                    </section>
+        <aside>
+            <ul>
+                <li> +91 9284071162</li>
+                <li>sonawanebunty2002@gmail.com</li>
+                <li>MIT college</li>
+            </ul>
+        </aside>
+        <footer class="footer-content" >
+           <p> © 2024 Atish. All rights reserved.</p>
+
+        </footer>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

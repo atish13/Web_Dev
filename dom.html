@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-color{
+            background-color: green;
+        }
+            .red-color{
+                background-color: red;
+            }
+
+             .ancestors *{
+                display: block-level;
+                margin: 5px;
+                border: 2px solid black;
+                padding: 5px;
+            }
+
+
+    </style>
+</head>
+<body>   
+    <!-- <h2>heading 2</h2> 
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit a adipisci tenetur at inventore ea molestiae praesentium natus repellendus labore!</p>
+    <h4 id="ul-list">unorder list</h4>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+    </ul>
+    <button>click</button>
+    <div class="bg-color" id="id1" style="width: 200px; height: 200px;  position: relative;">
+       hllll
+
+    </div> -->
+
+
+    <div class="ancestors">
+        <ul>ul(unorder-list)
+            <li>li(lis-item)
+                <span>span</span>
+                <span>span2</span>
+                <span>span2</span>
+            </li>
+        </ul>
+        <h5>heading-5</h5>
+    </div>
+       
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+        $(document).ready(()=>{
+
+
+            // $("button").click(()=>
+            // {
+            //     $("ul li:nth-child(odd)").hide();
+
+            // })
+
+            // event
+
+            // $("#ul-list").mousedown(()=>
+            // $("ul").hide())
+
+            // $("#ul-list").hover(()=>{
+            //     console.log('you enter on unorder list');
+            // },()=>
+            // {
+            //     console.log('bye');
+            // }
+            // )
+
+
+        //     $("input").blur(function(){
+        // $(this).css("background-color","purple");
+        //     });
+        //     $("input").focus(function(){
+        //         $(this).css("background-color","pink");
+        //     });
+
+
+        // $("button").click(function(){
+            // $("div").fadeTo(1000,0.7);
+
+            // $("div").slideToggle();
+
+        //    $("div").toggleClass("red-color");
+        // $("span").siblings().css("border","2px solid red");
+        $(".ancestors").children("span").css("background-color","brown");
+
+           
+
+        // })
+    })
+        
+    
+
+
+</script>
+
